@@ -1,0 +1,114 @@
+
+/* Importar as fontes Montserrat Regular e Extra Bold do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+body {
+  background-color:#181819;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.bingo-table {
+  width: 10%;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 5px;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  cursor:pointer;
+}
+
+th {
+  background-color: #632525;
+  font-weight: 800;
+  width: 60px;
+  font-size: 24px;
+  color: white;
+}
+
+.bingo-cell {
+  font-size: 20px;
+  width: 60px; 
+  height: 20px;
+  border-radius: 5%;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  background-color:  white;
+  color: #632525;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.bingo-cell.red {
+  animation: blink 2s linear;
+  background-color: rgba(255, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes blink {
+  0%, 100% {
+    background-color: rgba(255, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.8);
+  }
+  20% {
+    background-color: rgba(255, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+  }
+  30% {
+    background-color: rgba(255, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.8);
+  }
+  40% {
+    background-color: rgba(255, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+  }
+  50% {
+    background-color: rgba(255, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.8);
+  }
+  60% {
+    background-color: rgba(255, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+.winner-input {
+  margin-left: 5px;
+  }
+
+.winner-input input[type="text"] {
+flex: 1;
+padding: 5px;
+font-size: 16px;
+width: 150px;
+margin-bottom: 5px;
+
+}
+
+.winner-input #send-button {
+padding: 5px 10px;
+font-size: 16px;
+background-color: #162458;
+color: white;
+border: none;
+cursor: pointer;
+width: 125px;
+}
+.winner-input #button-clean {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
